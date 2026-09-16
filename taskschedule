@@ -1,0 +1,70 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMRn5/bSKZvNhj5KBnyayKN",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/abinaya7889-lgtm/delivery/blob/main/taskschedule\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import heapq\n",
+        "\n",
+        "tasks = []\n",
+        "\n",
+        "heapq.heappush(tasks, (-3, \"Study\"))\n",
+        "heapq.heappush(tasks, (-5, \"Project\"))\n",
+        "heapq.heappush(tasks, (-1, \"Email\"))\n",
+        "heapq.heappush(tasks, (-4, \"Assignment\"))\n",
+        "\n",
+        "print(\"Task Schedule:\")\n",
+        "\n",
+        "while tasks:\n",
+        "    priority, task = heapq.heappop(tasks)\n",
+        "    print(task, \"- Priority\", -priority)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "41gHMURTCCac",
+        "outputId": "43bba20e-9a7c-4ae5-b6f7-70d006b8e730"
+      },
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Task Schedule:\n",
+            "Project - Priority 5\n",
+            "Assignment - Priority 4\n",
+            "Study - Priority 3\n",
+            "Email - Priority 1\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
